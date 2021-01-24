@@ -1,0 +1,57 @@
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyBV4dYPVUfhBTHj42ulq7UwNJkasNvbZDs",
+    authDomain: "covid-company-auth.firebaseapp.com",
+    databaseURL: "https://covid-company-auth-default-rtdb.firebaseio.com",
+    projectId: "covid-company-auth",
+    storageBucket: "covid-company-auth.appspot.com",
+    messagingSenderId: "189470145750",
+    appId: "1:189470145750:web:391fd2201350bb68999d77",
+    measurementId: "G-DPVDS1WM0G"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+  
+  auth.onAuthStateChanged(user=>{
+    
+    if(user){
+      console.log("User has logged in ");
+    }else{
+      console.log("User has signed out");
+    }
+  });
+
+//connecting signup form with firebase and sending data to firestore from form 
+const signupForm = document.querySelector('#signup-form');
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const signupEmail = signupForm['signup-email'].value;
+  const signupPassword = signupForm['signup-password'].value;
+  auth.createUserWithEmailAndPassword(signupEmail, signupPassword).then(cred => {
+    console.log(cred);
+    db.collection('userDetails').add({
+    Name: signupForm.name.value,
+    Department: signupForm.dept.value,
+    Gender: signupForm.gender.value,
+    Age: signupForm.age.value
+  }).then(cred=>{
+    console.log(cred);
+    window.location =`/employee?name=${signupForm.name.value}`;
+   signupForm.reset();
+  });
+   
+  });
+});
+
+</script>
+</body>
+</html>

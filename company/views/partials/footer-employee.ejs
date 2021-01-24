@@ -1,0 +1,95 @@
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyBV4dYPVUfhBTHj42ulq7UwNJkasNvbZDs",
+    authDomain: "covid-company-auth.firebaseapp.com",
+    databaseURL: "https://covid-company-auth-default-rtdb.firebaseio.com",
+    projectId: "covid-company-auth",
+    storageBucket: "covid-company-auth.appspot.com",
+    messagingSenderId: "189470145750",
+    appId: "1:189470145750:web:391fd2201350bb68999d77",
+    measurementId: "G-DPVDS1WM0G"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+  
+  //keep a check on the state of user login /logout
+  auth.onAuthStateChanged(user=>{
+    if(user){
+      console.log("User has logged in ");
+    }else{
+      console.log("User has signed out");
+    }
+  });
+
+//connecting signup form with firebase
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  auth.signOut().then(() => {
+      window.location="/";
+    console.log('user signed out');
+  });
+});
+
+//db handling 
+const employeeDetails = document.querySelector('#employee-details');
+const signupForm = document.querySelector('#signup-form');
+
+const NameHeader = document.querySelector('.emp-header-name');
+const qs = window.location.search;
+const urlParams = new URLSearchParams(qs);
+const name = urlParams.get('name');
+NameHeader.textContent = name;
+
+
+//create HTML element and render 
+function renderEmployeeDetails(doc){
+  let div = document.createElement('div');
+  let Name = document.createElement('span');
+  let dept = document.createElement('span');
+  let gender = document.createElement('span');
+  let age = document.createElement('span');
+
+  div.setAttribute('data-id', doc.id);
+  // NameHeader.textContent=doc.data().name;
+  Name.textContent = doc.data().Name;
+  dept.textContent = doc.data().Department;
+  gender.textContent = doc.data().Gender;
+  age.textContent = doc.data().Age;
+
+  div.appendChild(Name);
+  div.appendChild(dept);
+  div.appendChild(gender);
+  div.appendChild(age);
+  employeeDetails.appendChild(div);
+}
+
+//getting data 
+window.onload= ()=>{
+  db.collection('userDetails').where('Name','==',name).get().then((snapshot)=>{
+  // console.log(snapshot.docs);
+  snapshot.docs.forEach(doc => {
+        console.log(doc.data());
+        renderEmployeeDetails(doc);
+  });;
+});
+}
+
+
+</script>
+
+
+
+</body>
+</html>

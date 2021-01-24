@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<%- include('partials/navBar') %>
+
+  <h4 id="contact-h4">Contact Form</h4><hr>
+    <form class="contact-form" action="/compose" method="post" autocomplete="off">
+      <div class="form-group">
+        <div class="field">
+        <label class="lContact">Title</label>
+        <input  id="form-title" autocomplete="off" class="form-control" type="text" name="postTitle" placeholder="Enter Title" >
+        </div>
+        <div class="field">
+        <label class="lContact">Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30" placeholder="Type Here" ></textarea>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-dark">Submit</button>
+    </form>
+
+    <%- include('partials/footer') %>
+

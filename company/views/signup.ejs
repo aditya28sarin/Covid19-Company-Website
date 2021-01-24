@@ -1,0 +1,44 @@
+
+<%- include('partials/header') %>
+<%- include('partials/navBar') %>
+
+
+<h4 id="signup-h4">Sign Up</h4>
+
+    <form id="signup-form" class="contact-form">
+
+        <div class="field">
+            <label class="lContact" for="signup-name">Name</label>
+            <input type="text" id="signup-name" class="form-control" name="name" placeholder="Enter Name" />
+        </div>
+
+        <div class="field">
+            <label class="lContact" for="signup-name">Department</label>
+            <input type="text" id="signup-department" class="form-control" name="dept" placeholder="Enter Department" />
+        </div>
+
+        <div class="field">
+            <label class="lContact" for="signup-name">Gender</label>
+            <input type="text" id="signup-gender" class="form-control" name="gender" placeholder="Enter Gender" />
+        </div>
+
+        <div class="field">
+            <label class="lContact" for="signup-name">Age</label>
+            <input type="text" id="signup-age" class="form-control" name="age" placeholder="Enter Age" />
+        </div>
+
+        <div class="field">
+            <label class="lContact" for="signup-email">Email</label>
+            <input type="email" id="signup-email" class="form-control" name="email" placeholder="Enter Email" />
+        </div>
+
+        <div class="field">
+            <label class="lContact" for="signup-password">Password</label>
+            <input type="password" id="signup-password" class="form-control" name="pwd" placeholder="Enter Password" />
+        </div>
+
+      <button  class="btn btn-outline-dark" style="margin-top: 20px;">Submit</button>
+
+    </form>
+
+   <%- include('partials/footer-signup') %>

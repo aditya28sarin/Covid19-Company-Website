@@ -1,0 +1,115 @@
+<%- include('partials/header') %>
+<%- include('partials/navBar') %>
+
+<section>
+  <div id="sec-1">
+        <h1 class="hIndex">AUTHORITY CREDENTIALS</h1><br>
+        <div class="form">
+
+    <form id="signin-form">
+
+          <div class='login'>
+              <label class="auth" for="login-email">Email</label>
+              <input type= "email" placeholder="  Email" id="signin-email"  required/><br>
+              <label class="auth" for="login-password">Password</label>
+              <input type= "password" placeholder="  Password" id="signin-password" required/><br>
+          </div>
+          
+              <button class="btn btn-outline-dark" >Sign In</button>
+              <p class="signUp">If you haven't registered yet, you can <a href="./signup">Sign Up</a> here</p>
+       
+
+    </form>
+
+  </div>
+        <!-- <div class="login-icons">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div> -->
+
+
+      </div>
+    </form >
+  
+ 
+   
+      <div id="details">
+        <h3 class="tips">TIPS TO PREVENT COVID TRANSMISSION AT WORKPLACE!</h3>
+        
+        <div class="details-handwash">
+            <img class="handwash-img" src="images/handwash.png">
+            <p class="handwash-text mid-text">Encourage Regular Hand Washing. Advise employees to check for travelers health notices in regards to their travel destinations. 
+                If the area is heavily affected, strongly suggest the trip be postponed or cancelled. 
+                Minimizing adverse effects on other entities in their supply chains.
+            </p>
+        </div>
+
+
+        <div class="details-sanitize">
+            <img class="sanitize-img" src="images/sanitize.jpg">
+            <p class="sanitize-text mid-text">Hand hygiene is an important part of the response to COVID-19.
+                 Washing hands often with soap and water for at least 20 seconds is essential, 
+                 especially after going to the bathroom; before eating; and after coughing, sneezing, or blowing one’s nose. 
+                 If soap and water are not readily available, it is recommended for consumers to use an alcohol-based hand sanitizer that contains at least 60% alcohol.
+            </p>
+        </div>
+
+
+        <div class="details-mask">
+            <img class="mask-img" src="images/mask.jpg">
+            <p class="mask-text mid-text">CDC’s current guidance recommends that employees wear cloth face coverings in public settings and work environments
+                 where social distancing measures cannot be maintained. OSHA states employees may wear cloth face coverings “based 
+                 on the specific circumstances present at the work site.” 
+            </p>
+        </div>
+
+       <!-- Carousel Portion -->
+
+       <section id="testimonials">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            
+            <div class="carousel-inner">
+              
+                <div class="carousel-item active" style="padding: 2%;">
+                    <h2 class="testimonial-h2">Mask Detection Feature</h2>
+                  <h3 class="testimonial-h3">The gates of the premises would open only when the person's mask has been detected by the entry gate camera. 
+                      Detection period can range anywhere between 10-25 seconds.
+                    This protocol has to be followed each day before entering the premises.</h3>
+                  <img class="dog-img" src="images/mask-testimonial.png" alt="dog-profile">
+                </div>
+        
+                <div class="carousel-item" style="padding: 2%;">
+                    <h2 class="testimonial-h2">Proximity Application</h2>
+                  <h3 class="testimonial-h3">An application is designed to help the organization keep track of the contact tracing details of each employee.
+                      The application will use Bluetooth on campus and GPS when the employee is out of campus.
+                  </h3>
+                  <img class="testimonial-image" src="images/app-testimonial.png" alt="lady-profile">
+                </div>
+
+                <div class="carousel-item" style="padding: 2%;">
+                    <h2 class="testimonial-h2">Smart Wearable</h2>
+                  <h3 class="testimonial-h3">A smart wearable is designed that would keep a track on the person's cough levels and also use a code 
+                      exchange feature when two people come in contact. It would thereby help in contract tracing and facilitate quick action against the infected.
+                  </h3>
+                  <img class="testimonial-image" src="images/watch-testimonial.png" alt="lady-profile">
+                </div>
+      
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    
+      </section>
+</section>
+
+
+<%- include('partials/footer') %>
