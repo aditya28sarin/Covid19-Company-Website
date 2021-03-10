@@ -1,4 +1,4 @@
-# covid19-company-website
+# Covid-19 Company Website
 
 - Created a company website using Node.js and Express at the backend with Firebase and Vanilla JS with ReactJs for the front-end that tracks employee behaviour and helps in contact tracing in the company building, using BLE and outside, using GPS; if one catches covid-19.
 
