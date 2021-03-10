@@ -4,7 +4,7 @@
 
 - Website uses Firebase Auth signUp and SignIn and the Firestore database alongwith Firebase storage for saving employee data. Also, the real time database was used to store sensor data ( Bluetooth, GPS, Temperature and Pulse).
 
-Also added feature of displaying covid-19 statistics in the application and website by fetching foreign API.
+- Also added feature of displaying covid-19 statistics in the application and website by fetching foreign API.
 
 ## Prerequisites
 
