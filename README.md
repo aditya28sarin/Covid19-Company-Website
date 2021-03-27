@@ -99,3 +99,7 @@ To start contributing, follow the below guidelines:
 
   [![Watch the video](https://img.youtube.com/vi/oOSLWzyPFAQ/0.jpg)](https://youtu.be/oOSLWzyPFAQ)
 
+### Covid-19 Mobile Application 
+
+  [![Watch the video](https://img.youtube.com/vi/YmqAT9bEa7k/0.jpg)](https://youtube.com/shorts/YmqAT9bEa7k)
+
