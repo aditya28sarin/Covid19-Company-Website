@@ -97,8 +97,5 @@ To start contributing, follow the below guidelines:
 
 ### Covid-19 Company Website 
 
-  [![Watch the video](https://img.youtube.com/vi/9EDSI8JlZTw/0.jpg)](https://youtu.be/9EDSI8JlZTw)
+  [![Watch the video](https://img.youtube.com/vi/oOSLWzyPFAQ/0.jpg)](https://youtu.be/oOSLWzyPFAQ)
 
-### Covid-19 Statistics Webpage
-
-  [![Watch the video](https://img.youtube.com/vi/O9ZCgBhYq2U/0.jpg)](https://youtu.be/O9ZCgBhYq2U)
